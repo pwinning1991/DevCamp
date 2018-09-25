@@ -6,6 +6,6 @@
 <p><%= port.title %> </p>
 <p><%= port.subtitle %> </p>
 <p><%= port.body %> </p>
-<%= image_tag port.thumb_image %>
+<%= image_tag port.thumb_image if !port.thumb_image.nil? %>
 
 <% end %>
