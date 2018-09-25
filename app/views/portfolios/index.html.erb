@@ -4,9 +4,9 @@
 
 <% @portfolio_items.each do |port| %>
 
-<p><%= port.title %> </p>
+<p><%= link_to port.title, portfolio_path(port) %> </p>
 <p><%= port.subtitle %> </p>
 <p><%= port.body %> </p>
 <%= image_tag port.thumb_image if !port.thumb_image.nil? %>
-<%= link_to "Edit", edit_portfolio_path(port.id) %>
+<%= link_to "Edit", edit_portfolio_path(port) %>
 <% end %>
