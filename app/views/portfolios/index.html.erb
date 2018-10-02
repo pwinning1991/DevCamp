@@ -3,7 +3,6 @@
 <%= link_to "Create New Item", new_portfolio_path %>
 
 <% @portfolio_items.each do |port| %>
-
 <p><%= link_to port.title, portfolio_show_path(port) %> </p>
 <p><%= port.subtitle %> </p>
 <p><%= port.body %> </p>
