@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
-#    config.action_controller.permit_all_parameters = true
+  layout 'portfolio'
+
   def index
     @portfolio_items = Portfolio.all
   end
