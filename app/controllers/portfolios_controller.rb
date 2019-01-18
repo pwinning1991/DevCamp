@@ -8,7 +8,7 @@ class PortfoliosController < ApplicationController
   end
 
   def angular
-    @angular_portfolio_item =Portfolio.angular
+    @angular_portfolio_item = Portfolio.angular
   end
 
   def new
