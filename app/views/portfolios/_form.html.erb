@@ -36,15 +36,14 @@
     <hr>
     <div class='col-md-12'>'
       <h2> Technologies </h2>
-      
       <div>
         <%= f.fields_for :technologies do |technoloy_form| %>
-          <div class='form-control'>
-            <%= technoloy_form.label :name %>
-            <%= technoloy_form.text_field :name, class: 'form-control' %>
-          </div>
+          <%= render 'technology_fields', f: technoloy_form %>
         <% end %>
-      </div>
+
+        <div>
+          <%= link_to_add_association 'Add Technology', f, :technologies %>
+       </div>
 
       <div class="actions">
         <%= f.submit 'Save Portfolio Item', class: 'btn btn-primary btn-block' %>
